@@ -6,3 +6,5 @@ function createSquare() {
     // RESTITUISCO IL QUADRATO CONTENUTO ALL'INTERNO DELLA VARIABILE//
     return currentElement;
 }
+//RECUPERO ELEMENTO CONTENENTE LA MIA GRIGLIA//
+const grid = document.getElementById('grid');
