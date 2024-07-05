@@ -41,9 +41,10 @@ header {
     align-items: center;
     width: calc(100% / 10);
     height: calc(100% / 10);
-    background-color: blue;
+    background-color: rgb(5, 245, 245);
     border: 1px solid black;
-    color: white;
+    color: black;
+    
 
 }
 
@@ -53,5 +54,6 @@ header {
 
 main {
   background-color: rgb(5, 245, 245);
+  padding: 30px;
 }
 
