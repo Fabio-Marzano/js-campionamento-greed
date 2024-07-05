@@ -6,19 +6,23 @@ function createSquare() {
     // RESTITUISCO IL QUADRATO CONTENUTO ALL'INTERNO DELLA VARIABILE//
     return currentElement;
 }
+//RECUPERO IL PULSANTE DAL DOM//
+const btn = document.getElementById('start');
 //RECUPERO ELEMENTO CONTENENTE LA MIA GRIGLIA//
 const grid = document.getElementById('grid');
 
-for (let i = 1; i < 100; i++) {
+btn.addEventListener('click', function () {
+    // ESEGUO CICLO DI 100 ITERAZIONI PER CREARE LA GRIGLIA//
+    for (let i = 0; i < 100; i++) {
+        // CREO UN QUADRATO CON LA FUNZIONE createSquare()//
+        let currentSquare = createSquare();
+        //AGGIUNGO EVENTO CLICK AL QUADRATO CREATO//
+        currentSquare.addEventListener('click', function () {
+            console.log(this);
+            this.classList.toggle('clicked');
+        });
+    
 
-    let currentSquare = createSquare();
+    }
 
-    currentSquare.addEventListener('click', function () {
-        console.log(this);
-        this.classList.toggle('clicked');
-    });
-
-    currentSquare.innerText = i + 1;
-
-    grid.append(currentSquare);
-}
+});
