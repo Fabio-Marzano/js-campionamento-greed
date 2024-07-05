@@ -21,7 +21,10 @@ btn.addEventListener('click', function () {
             console.log(this);
             this.classList.toggle('clicked');
         });
-    
+        //GLI ASSEGNO IL NUMERO PROGRESSIVO//
+        currentSquare.innerText = i + 1;
+        //APPENDO IL QUADRATO APPENA CREATO ALL'INTERNO DELLA GRIGLIA//
+        grid.append(currentSquare);
 
     }
 
